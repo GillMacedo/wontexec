@@ -1,0 +1,28 @@
+[
+  {
+    "skills": ["checking-container-start"],
+    "query": "Our pod is in CrashLoopBackOff with exec /app/server: no such file or directory, but the file is in the image. Why?",
+    "expected_behavior": [
+      "Gets the image as a tar (asking before pulling or saving) and runs wontexec on it",
+      "Explains that the missing file is the ELF loader named by the program, not the program itself",
+      "Gives the fix in the build (CGO_ENABLED=0, no -buildmode=pie, or a base image with the same C library), without editing files unless asked"
+    ]
+  },
+  {
+    "skills": ["checking-container-start"],
+    "query": "I want to move this Go service from debian:bookworm-slim to distroless/static. Will it still start?",
+    "expected_behavior": [
+      "Runs wontexec with --binary on the service's linux build against the distroless/static image",
+      "Reports loader, library, CA certificate and time zone results, and says which were checked",
+      "Treats exit code 2 as unknown, not as a pass"
+    ]
+  },
+  {
+    "skills": ["checking-container-start"],
+    "query": "The new image fails with version GLIBC_2.34 not found. Which base image do we need?",
+    "expected_behavior": [
+      "Runs wontexec on the image and reports which versions are missing and the newest version the image has",
+      "Suggests building against an older C library, a newer base image, or CGO_ENABLED=0"
+    ]
+  }
+]

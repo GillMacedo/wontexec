@@ -1,0 +1,13 @@
+{
+  "name": "wontexec",
+  "version": "0.1.0",
+  "description": "Check that a Linux program will start in a container image before you deploy it: missing loader (exec no such file or directory), wrong architecture (exec format error), missing shared libraries, GLIBC version not found, unknown image user, and missing CA certificates or time zone data for Go programs.",
+  "author": {
+    "name": "Giulliano Macedo",
+    "url": "https://github.com/GillMacedo"
+  },
+  "homepage": "https://github.com/GillMacedo/wontexec",
+  "repository": "https://github.com/GillMacedo/wontexec",
+  "license": "MIT",
+  "keywords": ["docker", "container", "kubernetes", "go", "golang", "distroless", "alpine", "glibc", "cgo", "crashloopbackoff"]
+}

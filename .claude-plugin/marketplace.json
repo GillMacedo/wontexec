@@ -1,0 +1,14 @@
+{
+  "name": "wontexec-marketplace",
+  "description": "Marketplace for wontexec, which checks that a Linux program will start in a container image before you deploy it.",
+  "owner": {
+    "name": "Giulliano Macedo"
+  },
+  "plugins": [
+    {
+      "name": "wontexec",
+      "source": "./plugin",
+      "description": "Check that a program will start in a container image: loader, architecture, shared libraries, glibc versions, image user, and CA certificates and time zone data for Go."
+    }
+  ]
+}

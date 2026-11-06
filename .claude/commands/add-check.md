@@ -1,0 +1,1 @@
+Add a check for this container start failure: $ARGUMENTS. First reproduce it with a real program: build it, and where you can, run it through the image's own loader to see the real error. Then add the detection to `plugin/scripts/wontexec.go`, add a case to `tests/integration_test.go` that must be flagged and one that must stay quiet, and update the README's table of checks.

@@ -1,0 +1,1 @@
+Prepare a release for version $ARGUMENTS: update `version` in `plugin/.claude-plugin/plugin.json` and the `version` constant in `plugin/scripts/wontexec.go`, move the `[Unreleased]` entries in `CHANGELOG.md` under the new version with today's date, run `make test` and `make lint`, and open a pull request. Don't tag or merge.

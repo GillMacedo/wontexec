@@ -1,0 +1,8 @@
+{
+  "name": "wontexec",
+  "image": "mcr.microsoft.com/devcontainers/go:1",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {}
+  },
+  "postCreateCommand": "npm install --global @anthropic-ai/claude-code@2.1.314"
+}
